@@ -1,0 +1,11 @@
+//mixin is a group of CSS declarations that can be reused throughout the style sheet.
+@mixin box-shadow($x, $y, $blur, $c) {
+  -webkit-box-shadow: $x, $y, $blur, $c;
+  -moz-box-shadow: $x, $y, $blur, $c;
+  -ms-box-shadow: $x, $y, $blur, $c;
+  box-shadow: $x, $y, $blur, $c;
+}
+
+div {
+  @include box-shadow(0px, 0px, 4px, #fff);
+}
