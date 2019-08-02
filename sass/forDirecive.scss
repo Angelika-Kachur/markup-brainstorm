@@ -1,0 +1,13 @@
+//start through end includes the end number
+@for $j from 1 through 5 {
+  .text-#{$j} {
+    font-size: #{10 * $j}px;
+  }
+}
+
+//start to end excludes the end number
+@for $j from 1 to 5 {
+  .text-#{$j} {
+    font-size: #{10 * $j}px;
+  }
+}
