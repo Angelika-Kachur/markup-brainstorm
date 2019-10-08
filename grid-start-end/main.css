@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+}
+
+/* Grid Container GENERAL styles 1 */
+.grid-container {
+  display: grid;
+  grid-gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.grid-container .title {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background: khaki;
+    margin: 0;
+    text-align: center;
+}
+
+/* Section 1 */
+.section-1 {
+    padding: 100px 0;
+    background: gray;
+}
+
+/* Section 1 GRID styles for children */
+.section-1 .text {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background: khaki;
+    margin: 0;
+}
+
+.section-1 .card-1 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    background: pink;
+}
+
+.section-1 .card-2 {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    background: blue;
+}
+
+
+/* Section 2 */
+.section-2 {
+    padding: 100px 0;
+    background: darkkhaki;
+}
+
+/* Section 2 GRID styles for children */
+.section-2 .card-1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    background: pink;
+}
+
+.section-2 .card-2 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    background: blue;
+}
+
+.section-2 .card-3 {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    background: violet;
+}
+
+.section-2 .btn-buy {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 6;
+}
+
+.section-2 .btn-cancel {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 6;
+    grid-row-end: 6;
+}
+
+
+@media (max-width: 768px) {
+
+    /* general */
+    .grid-container .title {
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+
+    /* section 1 */
+    .section-1 .card-1 {
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+
+    .section-1 .card-2 {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 8;
+        grid-row-end: 12;
+    }
+
+    /* section 2 */
+    .section-2 .card-1 {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 2;
+        grid-row-end: 6;
+    }
+
+    .section-2 .card-2 {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 6;
+        grid-row-end: 10;
+    }
+
+    .section-2 .card-3 {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 10;
+        grid-row-end: 14;
+    }
+
+    .section-2 .btn-buy {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 14;
+        grid-row-end: 15;
+    }
+
+    .section-2 .btn-cancel {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 15;
+        grid-row-end: 16;
+    }
+}
