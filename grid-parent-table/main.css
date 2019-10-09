@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+/* Grid Container GENERAL styles 1 */
+.grid-container {
+  display: grid;
+  grid-gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+
+/* Section 1 */
+.section-1 {
+    padding: 100px 0;
+    background: gray;
+}
+
+/* Section 1 GRID styles for children */
+
+
+
+/* Section 2 */
+.section-2 {
+    padding: 100px 0;
+    background: darkkhaki;
+}
+
+/* Section 2 GRID styles for children */
+
+
+
+@media (max-width: 768px) {
+
+    /* general */
+
+
+    /* section 1 */
+
+
+    /* section 2 */
+
+}
