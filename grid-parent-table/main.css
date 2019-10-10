@@ -1,45 +1,86 @@
 body {
     margin: 0;
-}
-
-/* Grid Container GENERAL styles 1 */
-.grid-container {
-  display: grid;
-  grid-gap: 24px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 24px;
+    text-align: center;
 }
 
 
-/* Section 1 */
-.section-1 {
-    padding: 100px 0;
-    background: gray;
-}
-
-/* Section 1 GRID styles for children */
-
-
-
-/* Section 2 */
-.section-2 {
+/* Section */
+.section {
     padding: 100px 0;
     background: darkkhaki;
 }
 
-/* Section 2 GRID styles for children */
 
+/* Grid Container GENERAL styles 1 */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  "title title title title title title"
+  "card1 card1 card2 card2 card3 card3"
+  "btnBox btnBox btnBox btnBox btnBox btnBox";
+  grid-gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Grid Areas */
+.title {
+    grid-area: title;
+}
+
+.card-1 {
+    grid-area: card1;
+    background: pink;
+}
+
+.card-2 {
+    grid-area: card2;
+    background: blue;
+    
+}
+
+.card-3 {
+    grid-area: card3;
+    background: violet;
+}
+
+.btn-box {
+    grid-area: btnBox;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btn-cancel {
+    grid-column-start: 3;
+}
+
+.title {
+    background: khaki;
+    margin: 0;
+}
 
 
 @media (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+        "title title"
+        "card1 card1"
+        "card2 card2"
+        "card3 card3"
+        "btnBox btnBox";
+        grid-gap: 24px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
-    /* general */
+    .btn-box {
+        grid-template-columns: 1fr;
+    }
 
-
-    /* section 1 */
-
-
-    /* section 2 */
-
+    .btn-cancel {
+        grid-column-start: 1;
+    }
 }
