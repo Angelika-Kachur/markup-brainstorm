@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Grid Container GENERAL styles 1 */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid-container .title {
+    background: khaki;
+    margin: 0;
+    text-align: center;
+}
+
+/* Section */
+.section {
+    padding: 100px 0;
+    background: darkkhaki;
+}
+
+/* Section GRID styles for children */
+.card-1 {
+    background: pink;
+}
+
+.card-2 {
+    background: blue;
+}
+
+
+.card-3 {
+    background: violet;
+}
+
+.btn-box {
+
+}
+
+.btn-buy {
+}
+
+
+.btn-cancel {
+}
+
+
+@media (max-width: 768px) {
+
+    /* general */
+    .grid-container .title {
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+    
+    /* section */
+    
+    .card-1 {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 2;
+        grid-row-end: 6;
+    }
+
+    
+    .card-2 {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 6;
+        grid-row-end: 10;
+    }
+
+    
+    .card-3 {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 10;
+        grid-row-end: 14;
+    }
+
+    
+    .btn-buy {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 14;
+        grid-row-end: 15;
+    }
+
+    
+    .btn-cancel {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 15;
+        grid-row-end: 16;
+    }
+}
