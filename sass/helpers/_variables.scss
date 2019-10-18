@@ -1,14 +1,15 @@
+/* fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
-
-$font-family: 'Roboto', sans-serif;
+$font-family: 'Roboto',
+sans-serif;
 
 /* colors */
-$primary: #023b56;
-$secondary: #6ccff6;
-$light: #edf5f8;
-$dark: #000000;
+$primary: pink;
+$secondary: green;
+$light: yellow;
+$dark: #000;
 $white: #fff;
-$orange: #ff7d2c;
+$orange: orange;
 $grey: #707070;
 $light-grey: #cbcbcb;
 $spacing-base: 16px;
@@ -38,53 +39,43 @@ $spacing-32: $spacing-base * 32; //512
 $maximum-width: 1380px;
 
 @mixin font-size-l-xxxx {
-	@include interpolate(
-		$properties: font-size,
+	@include interpolate($properties: font-size,
 		$min-screen: 20rem,
 		$max-screen: 85.375rem,
 		$min-value: 1.802rem,
-		$max-value: 4.209rem
-	);
+		$max-value: 4.209rem);
 }
 
 @mixin font-size-l-xxx {
-	@include interpolate(
-		$properties: font-size,
+	@include interpolate($properties: font-size,
 		$min-screen: 20rem,
 		$max-screen: 85.375rem,
 		$min-value: 1.602rem,
-		$max-value: 3.157rem
-	);
+		$max-value: 3.157rem);
 }
 
 @mixin font-size-l-xx {
-	@include interpolate(
-		$properties: font-size,
+	@include interpolate($properties: font-size,
 		$min-screen: 20rem,
 		$max-screen: 85.375rem,
 		$min-value: 1.424rem,
-		$max-value: 2.369rem
-	);
+		$max-value: 2.369rem);
 }
 
 @mixin font-size-l-x {
-	@include interpolate(
-		$properties: font-size,
+	@include interpolate($properties: font-size,
 		$min-screen: 20rem,
 		$max-screen: 85.375rem,
 		$min-value: 1.266rem,
-		$max-value: 1.777rem
-	);
+		$max-value: 1.777rem);
 }
 
 @mixin font-size-l {
-	@include interpolate(
-		$properties: font-size,
+	@include interpolate($properties: font-size,
 		$min-screen: 20rem,
 		$max-screen: 85.375rem,
 		$min-value: 1.125rem,
-		$max-value: 1.333rem
-	);
+		$max-value: 1.333rem);
 }
 
 @mixin font-size-m {
@@ -92,35 +83,30 @@ $maximum-width: 1380px;
 }
 
 @mixin font-size-s {
-	@include interpolate(
-		$properties: font-size,
+	@include interpolate($properties: font-size,
 		$min-screen: 20rem,
 		$max-screen: 85.375rem,
 		$min-value: 0.889rem,
-		$max-value: 0.75rem
-	);
+		$max-value: 0.75rem);
 }
 
 @mixin font-size-s-x {
-	@include interpolate(
-		$properties: font-size,
+	@include interpolate($properties: font-size,
 		$min-screen: 20rem,
 		$max-screen: 85.375rem,
 		$min-value: 0.79rem,
-		$max-value: 0.563rem
-	);
+		$max-value: 0.563rem);
 }
 
 @mixin font-size-s-xx {
-	@include interpolate(
-		$properties: font-size,
+	@include interpolate($properties: font-size,
 		$min-screen: 20rem,
 		$max-screen: 85.375rem,
 		$min-value: 0.702rem,
-		$max-value: 0.422rem
-	);
+		$max-value: 0.422rem);
 }
 
+/* content holder */
 @mixin maxWidth-margin-padding {
 	max-width: $maximum-width;
 	margin: 0 auto;

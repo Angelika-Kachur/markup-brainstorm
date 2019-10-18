@@ -1,18 +1,14 @@
-@function tint($color, $percentage) {
-	@return mix(white, $color, $percentage);
+@mixin reset-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-@function shade($color, $percentage) {
-	@return mix(black, $color, $percentage);
-}
-
-@mixin interpolate(
-	$properties,
+@mixin interpolate($properties,
 	$min-screen,
 	$max-screen,
 	$min-value,
-	$max-value
-) {
+	$max-value) {
 	& {
 		@each $property in $properties {
 			#{$property}: $min-value;
@@ -20,12 +16,10 @@
 
 		@media screen and (min-width: $min-screen) {
 			@each $property in $properties {
-				#{$property}: calc-interpolation(
-					$min-screen,
-					$min-value,
-					$max-screen,
-					$max-value
-				);
+				#{$property}: calc-interpolation($min-screen,
+						$min-value,
+						$max-screen,
+						$max-value);
 			}
 		}
 
@@ -40,7 +34,6 @@
 @function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
 	$a: ($max-value - $min-value) / ($max-screen - $min-screen);
 	$b: $min-value - $a * $min-screen;
-
 	$sign: '+';
 
 	@if ($b < 0) {
@@ -91,23 +84,6 @@
 			-webkit-transform: scaleX(1);
 			transform: scaleX(1);
 		}
-	}
-}
-
-@mixin timeline-line {
-	position: relative;
-
-	&::before {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 0;
-		width: 10px;
-		height: 10px;
-		color: white;
-		background: $primary;
-		border-radius: 50%;
-		@content;
 	}
 }
 
